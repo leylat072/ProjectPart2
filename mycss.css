@@ -1,0 +1,140 @@
+
+.content
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hero
+{
+  order: 100;
+}
+
+ .top-news{
+  order:100;
+}
+.scores
+{
+ order:100;
+ }
+ .weather
+  {
+    order:100;
+  }
+ .recent-news {
+    order:100;
+  }
+    .scores {
+  padding-top: 1em !important;
+  width: 100% !important;
+}
+@media screen and (max-width: 549px) {
+
+  
+  .header__title {
+    margin-left: 0;
+    font-size: 2em;
+    vertical-align: bottom; 
+  }
+
+  
+  .hamber
+  {
+    
+    font-size:48px;
+    color:red
+  }
+  .header__logo {
+      height: 50px;
+      margin-right: 1em;
+      vertical-align: top;
+      margin-top: 12px;
+  }
+  .header__bar {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+    
+       font-size:35px;
+    color:red;
+  }
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  }
+
+
+@media screen and (min-width: 550px) {
+  
+  #menubars{
+    display: none
+  }
+  .hero {
+    order: 0;
+    width: 60%;
+  }
+  .weather {
+    order: 1;
+    width: 40%;
+  }
+
+  .weather__today__temp {
+    font-size: 4em;
+}
+.top-news {
+    max-height: 300px;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 1em;
+    width:100%;
+}
+}
+
+@media screen and (min-width: 700px) {
+   #menubars{
+    display: none
+  }
+  .hero {
+    width: 50%;
+  }
+  .top-news {
+    order: 1;
+    width: 50%;
+  }
+  .scores {
+    order: 2;
+    width: 60% !important;
+  }
+  .weather {
+    order: 3;
+  }
+}
+
+@media screen and (min-width: 850px) {
+   #menubars{
+    display: none
+  }
+  main, .header__inner, .nav, .content {
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ 
+}
